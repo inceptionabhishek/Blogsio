@@ -39,9 +39,9 @@
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
   max-width: 400px;
   margin: 20px auto;
-  
+
   padding: 15px 10px;
-  background: #1B1A17;
+  background: #1b1a17;
   color: rgb(255, 255, 255);
 }
 
@@ -106,6 +106,10 @@ small {
   color: #fff;
   font-size: 20px;
   font-family: "Secular One", sans-serif;
+}
 
-  
+.tempheading {
+  font-family: "Secular One", sans-serif;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
 }
