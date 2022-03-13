@@ -1,23 +1,15 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import Pagination from "../Pagecomponents/Pagination";
-import Post from "../Pagecomponents/Post";
+
 import Chip from "@mui/material/Chip";
 import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
+
 import { Route, Routes } from "react-router-dom";
-import Tooltip from "@mui/material/Tooltip";
-import MenuItem from "@mui/material/MenuItem";
-import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
-import Container from "@mui/material/Container";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
 import { Grid, Typography } from "@mui/material";
-import Button from "@mui/material/Button";
+import Cover from "../../Images/cover.jpg";
 const url = "https://jsonplaceholder.typicode.com/posts";
 
 function Home() {
@@ -38,19 +30,34 @@ function Home() {
       <h1 className="heading2">
         <span> Recent Posts 👋</span>
       </h1>
-
-      {posts.length > 0 ? (
-        <>
-          <Pagination
-            data={posts}
-            RenderComponent={Post}
-            pageLimit={5}
-            dataLimit={4}
-          />
-        </>
-      ) : (
-        <h1>No Posts to display</h1>
-      )}
+      <div className="postdisplay">
+        <Grid container spacing={3}>
+          {posts.map((post) => (
+            <Grid item xs={12} sm={6} md={4} lg={3} key={post.id}>
+              <Box
+                display="flex"
+                flexDirection="column"
+                justifyContent="center"
+                p={2}
+                m={1}
+                bgcolor="background.paper"
+                boxShadow={3}
+              >
+                <img src={Cover} alt="post" className="blogcover" />
+                <Typography variant="h5">{post.title}</Typography>
+                <Typography className="post-body">{post.body}</Typography>
+                <Stack direction="row" spacing={2}>
+                  <Avatar
+                    alt="author"
+                    src="https://randomuser.me/api/portraits/thumb/women/0.jpg"
+                  />
+                  
+                </Stack>
+              </Box>
+            </Grid>
+          ))}
+        </Grid>
+      </div>
     </div>
   );
 }
