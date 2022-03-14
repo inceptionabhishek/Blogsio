@@ -11,6 +11,9 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Profile from "./pages/Profile";
 import Totalusers from "./pages/Totalusers";
+import Followers from "./components/Pagecomponents/Followers";
+import Folllowing from "./components/Pagecomponents/Following";
+import Footer from "./components/UI/Footer";
 function App() {
   return (
     <Router>
@@ -20,7 +23,9 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/profile" element={<Profile />} />
-        <Route path='/totalusers' element={<Totalusers />} />
+        <Route path="/totalusers" element={<Totalusers />} />
+        <Route path="/followers" element={<Followers />} />
+        <Route path="/following" element={<Folllowing />} />
       </Routes>
     </Router>
   );
