@@ -32,7 +32,7 @@ function NavbarComponent() {
                   Login
                   <LoginIcon />
                 </Link>
-                <Link to="/login" className="links">
+                <Link to="/signup" className="links">
                   Create Account
                 </Link>
               </Nav>

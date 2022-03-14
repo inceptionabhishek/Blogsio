@@ -4,29 +4,33 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
-
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 function CardComponent(props) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 600 }}>
       <CardActionArea>
         <CardMedia
           component="img"
-          height="140"
-          image="/static/images/cards/contemplative-reptile.jpg"
-          alt="green iguana"
+          height="200px"
+          image={props.picture}
+          alt="picture"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            {props.title}
+            {props.firstname} {props.lastname}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            {props.body}
+            {props.email}
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            <LocationOnIcon />
+            {props.location}
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
         <Button size="small" color="primary">
-          Share
+          Edit Profile
         </Button>
       </CardActions>
     </Card>

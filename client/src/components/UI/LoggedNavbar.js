@@ -23,11 +23,11 @@ function LoggedNavbar() {
             ></Nav>
             <Nav className="ml-auto" navbarScroll>
               <Nav className="me-auto">
-                <Link to="/login" className="links">
+                <Link to="/profile" className="links">
                   profile
                 </Link>
-                <Link to="/login" className="links">
-                  Blogs
+                <Link to="/totalusers" className="links">
+                  Users
                 </Link>
               </Nav>
             </Nav>
