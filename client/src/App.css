@@ -26,9 +26,6 @@
 .blogcover {
   width: 200px;
 }
-.blogcover:hover {
-  opacity: 0.5;
-}
 
 .heading2 span {
   background-color: rgb(23, 172, 209);
@@ -56,6 +53,12 @@
   max-height: 630px;
   background-image: url("./Images/Topcover.jpg");
   overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+.postthumbnail {
+  width: 100%;
+  max-height: 550px;
   background-size: cover;
   background-position: center;
 }
@@ -102,4 +105,51 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.update {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Secular One", sans-serif, cursive;
+}
+
+.form {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.postdisplay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.update2 {
+  color: rgb(71, 15, 15);
+}
+.postbody:hover {
+  background-color: rgb(146, 145, 155);
+  color: rgb(0, 0, 0);
+}
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: 50px auto;
+  text-align: center;
+  font-family: arial;
+  padding: 10px;
+  cursor: pointer;
+}
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top: -50px;
 }

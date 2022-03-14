@@ -10,6 +10,7 @@ import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
 import { Grid, Typography } from "@mui/material";
 import Cover from "../../Images/cover.jpg";
+import { Link } from "react-router-dom";
 const url = "https://jsonplaceholder.typicode.com/posts";
 
 function Home() {
@@ -72,6 +73,7 @@ function Home() {
                     m={1}
                     bgcolor="background.paper"
                     boxShadow={3}
+                    className="postbody"
                   >
                     <img src={Cover} alt="post" className="blogcover" />
                     <Typography variant="h5">{post.title}</Typography>
@@ -86,6 +88,7 @@ function Home() {
                     >
                       {post.body}
                     </Typography>
+                    <Link to="/view/blog">Read more..</Link>
                     <Stack direction="row" spacing={1}>
                       <Chip label="React" />
                       <Chip label="Node" />

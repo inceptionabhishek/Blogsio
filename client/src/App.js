@@ -14,6 +14,8 @@ import Totalusers from "./pages/Totalusers";
 import Followers from "./components/Pagecomponents/Followers";
 import Folllowing from "./components/Pagecomponents/Following";
 import Footer from "./components/UI/Footer";
+import Displaypost from "./pages/Displaypost";
+import Update from "./pages/Update";
 function App() {
   return (
     <Router>
@@ -26,6 +28,8 @@ function App() {
         <Route path="/totalusers" element={<Totalusers />} />
         <Route path="/followers" element={<Followers />} />
         <Route path="/following" element={<Folllowing />} />
+        <Route path="/view/blog" element={<Displaypost />} />
+        <Route path="/update/blog" element={<Update />} />
       </Routes>
     </Router>
   );

@@ -12,6 +12,9 @@ import Slider from "@mui/material/Slider";
 import { Grid, Typography } from "@mui/material";
 import Cover from "../Images/cover.jpg";
 import Footer from "../components/UI/Footer";
+import { Link } from "react-router-dom";
+import UpdateIcon from "@mui/icons-material/Update";
+import DeleteIcon from "@mui/icons-material/Delete";
 function Profile() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -124,6 +127,15 @@ function Profile() {
                       >
                         {post.body}
                       </Typography>
+                      <Link to="/view/blog">Read more..</Link>
+                      <Stack direction="row" spacing={1}>
+                        <Chip label="React" />
+                        <Chip label="Node" />
+                      </Stack>
+                      <Stack direction="row" spacing={1}>
+                        <Chip label="MongoDB" />
+                        <Chip label="Express" />
+                      </Stack>
                       <Stack direction="row" spacing={2}>
                         <Avatar
                           alt="author"
@@ -134,6 +146,12 @@ function Profile() {
                           <Typography variant="h8">Abhishek kumar</Typography>
                           <Typography variant="h8">14-03-2022</Typography>
                         </Stack>
+                      </Stack>
+                      <Stack direction="row" spacing={2}>
+                        <Link to="/update/blog">
+                          <UpdateIcon />
+                        </Link>
+                        <DeleteIcon />
                       </Stack>
                     </Box>
                   </Grid>

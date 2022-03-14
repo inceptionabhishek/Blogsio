@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+
 function CardComponent(props) {
   return (
     <Card sx={{ maxWidth: 600 }}>
