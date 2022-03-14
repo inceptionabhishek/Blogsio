@@ -11,7 +11,7 @@ function Topcover() {
       <br />
       <br />
       <p className="phead">
-        Medium is an open platform where readers find dynamic thinking, and
+        Blogsio is an open platform where readers find dynamic thinking, and
         where expert and undiscovered voices can share their writing on any
         topic.
       </p>

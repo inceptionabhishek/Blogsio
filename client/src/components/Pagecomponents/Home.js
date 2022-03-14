@@ -43,7 +43,7 @@ function Home() {
           </h1>
           <div className="postdisplay">
             <Grid container spacing={3}>
-              {posts.map((post) => (
+              {posts.slice(0, 15).map((post) => (
                 <Grid item xs={12} sm={6} md={4} lg={4} key={post.id}>
                   <Box
                     sx={{
@@ -86,12 +86,21 @@ function Home() {
                     >
                       {post.body}
                     </Typography>
+                    <Stack direction="row" spacing={1}>
+                      <Chip label="React" />
+                      <Chip label="Node" />
+                    </Stack>
+                    <Stack direction="row" spacing={1}>
+                      <Chip label="MongoDB" />
+                      <Chip label="Express" />
+                    </Stack>
                     <Stack direction="row" spacing={2}>
                       <Avatar
                         alt="author"
                         src="https://randomuser.me/api/portraits/thumb/women/0.jpg"
                       />
                       {"   "}
+
                       <Stack direction="column" spacing={0}>
                         <Typography variant="h8">Abhishek kumar</Typography>
                         <Typography variant="h8">14-03-2022</Typography>

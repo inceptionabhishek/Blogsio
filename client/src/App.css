@@ -82,3 +82,9 @@
   align-items: center;
   justify-content: center;
 }
+
+.YourPosts{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
