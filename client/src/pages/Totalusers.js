@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Spinner } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import Footer from "../components/UI/Footer";
 
 function Totalusers() {
   const [users, setUsers] = useState([]);
@@ -43,6 +44,7 @@ function Totalusers() {
           ))}
         </>
       )}
+      <Footer />
     </div>
   );
 }

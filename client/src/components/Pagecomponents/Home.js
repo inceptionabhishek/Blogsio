@@ -4,19 +4,26 @@ import { useState, useEffect } from "react";
 import Chip from "@mui/material/Chip";
 import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
-import { Spinner } from "react-bootstrap";
+import { Button, Spinner } from "react-bootstrap";
 import { Route, Routes } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
 import { Grid, Typography } from "@mui/material";
 import Cover from "../../Images/cover.jpg";
 import { Link } from "react-router-dom";
+import ThumbUpIcon from "@mui/icons-material/ThumbUp";
+import ThumbDownIcon from "@mui/icons-material/ThumbDown";
+import WatchLaterIcon from "@mui/icons-material/WatchLater";
 const url = "https://jsonplaceholder.typicode.com/posts";
 
 function Home() {
   const [posts, setPosts] = useState([]);
   const [error, setError] = useState("");
+  const [upvotes, setUpvotes] = useState(1);
+  const [downvotes, setDownvotes] = useState(1);
   const [loading, setLoading] = useState(true);
+  const [valueGiven, setVlaueGiven] = useState(false);
+  const [upvoted, setUpvoted] = useState(false);
 
   useEffect(() => {
     fetch(url)
@@ -30,6 +37,31 @@ function Home() {
       })
       .catch((error) => setError(error.message));
   }, []);
+  const handleupvotes = () => {
+    if (valueGiven === false) {
+      setUpvotes(upvotes + 1);
+      setVlaueGiven(true);
+    } else {
+      setUpvotes(upvotes - 1);
+      setVlaueGiven(false);
+    }
+  };
+  const handlewatchlater = () => {
+    alert("Added to watch later");
+  };
+  const handledownvote = () => {
+    if (upvoted === true) {
+      setUpvotes(upvotes - 1);
+      setUpvoted(false);
+    }
+    if (valueGiven === false) {
+      setDownvotes(downvotes + 1);
+      setVlaueGiven(true);
+    } else {
+      setDownvotes(downvotes - 1);
+      setVlaueGiven(false);
+    }
+  };
   if (error) return <h1>{error}</h1>;
   return (
     <>
@@ -89,13 +121,29 @@ function Home() {
                       {post.body}
                     </Typography>
                     <Link to="/view/blog">Read more..</Link>
-                    <Stack direction="row" spacing={1}>
-                      <Chip label="React" />
-                      <Chip label="Node" />
+                    <Stack direction="row" spacing={1} className="tags">
+                      <Link to="/tag">
+                        <Chip
+                          label="React"
+                          color="primary"
+                          variant="outlined"
+                        />
+                        <Chip label="Node" color="primary" variant="outlined" />
+                      </Link>
                     </Stack>
                     <Stack direction="row" spacing={1}>
-                      <Chip label="MongoDB" />
-                      <Chip label="Express" />
+                      <Link to="/tag">
+                        <Chip
+                          label="MongoDB"
+                          color="primary"
+                          variant="outlined"
+                        />
+                        <Chip
+                          label="Express"
+                          color="primary"
+                          variant="outlined"
+                        />
+                      </Link>
                     </Stack>
                     <Stack direction="row" spacing={2}>
                       <Avatar
@@ -108,6 +156,20 @@ function Home() {
                         <Typography variant="h8">Abhishek kumar</Typography>
                         <Typography variant="h8">14-03-2022</Typography>
                       </Stack>
+                    </Stack>
+                    <Button variant="contained" onClick={handlewatchlater}>
+                      <WatchLaterIcon />
+                    </Button>
+                    <br />
+                    <Stack direction="row" spacing={2}>
+                      <Button onClick={handleupvotes}>
+                        <ThumbUpIcon />
+                        <Typography variant="h8"> {upvotes}</Typography>
+                      </Button>
+                      <Button onClick={handledownvote}>
+                        <ThumbDownIcon />
+                        <Typography variant="h8"> {downvotes}</Typography>
+                      </Button>
                     </Stack>
                   </Box>
                 </Grid>

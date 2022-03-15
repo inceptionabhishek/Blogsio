@@ -128,13 +128,33 @@ function Profile() {
                         {post.body}
                       </Typography>
                       <Link to="/view/blog">Read more..</Link>
-                      <Stack direction="row" spacing={1}>
-                        <Chip label="React" />
-                        <Chip label="Node" />
+                      <Stack direction="row" spacing={1} className="tags">
+                        <Link to="/tag">
+                          <Chip
+                            label="React"
+                            color="primary"
+                            variant="outlined"
+                          />
+                          <Chip
+                            label="Node"
+                            color="primary"
+                            variant="outlined"
+                          />
+                        </Link>
                       </Stack>
                       <Stack direction="row" spacing={1}>
-                        <Chip label="MongoDB" />
-                        <Chip label="Express" />
+                        <Link to="/tag">
+                          <Chip
+                            label="MongoDB"
+                            color="primary"
+                            variant="outlined"
+                          />
+                          <Chip
+                            label="Express"
+                            color="primary"
+                            variant="outlined"
+                          />
+                        </Link>
                       </Stack>
                       <Stack direction="row" spacing={2}>
                         <Avatar

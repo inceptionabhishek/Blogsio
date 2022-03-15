@@ -16,10 +16,11 @@ import Folllowing from "./components/Pagecomponents/Following";
 import Footer from "./components/UI/Footer";
 import Displaypost from "./pages/Displaypost";
 import Update from "./pages/Update";
+import Tagspage from "./pages/Tagspage";
 function App() {
   return (
     <Router>
-      <LoggedNavbar />
+      <NavbarComponent />
       <Routes>
         <Route path="/" element={<Base />} />
         <Route path="/login" element={<Login />} />
@@ -30,6 +31,7 @@ function App() {
         <Route path="/following" element={<Folllowing />} />
         <Route path="/view/blog" element={<Displaypost />} />
         <Route path="/update/blog" element={<Update />} />
+        <Route path="/tag" element={<Tagspage />} />
       </Routes>
     </Router>
   );

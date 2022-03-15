@@ -131,7 +131,7 @@
   color: rgb(71, 15, 15);
 }
 .postbody:hover {
-  background-color: rgb(146, 145, 155);
+  background-color: #5edf94;
   color: rgb(0, 0, 0);
 }
 .card {
@@ -152,4 +152,8 @@
   height: 100px;
   border-radius: 50%;
   margin-top: -50px;
+}
+
+.tags {
+  cursor: pointer;
 }
