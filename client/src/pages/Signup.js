@@ -2,7 +2,7 @@ import React from "react";
 
 function Signup() {
   return (
-    <div>
+    <div className="login">
       <div className="container">
         <div className="row">
           <div className="col-md-6 m-auto">

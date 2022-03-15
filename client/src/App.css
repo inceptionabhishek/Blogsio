@@ -43,7 +43,7 @@
 .post-body {
   font-family: "Source Code Pro", monospace;
   font-size: 20px;
-  color: grey;
+  background-color: #2fa4ff;
 }
 #example1 {
   color: #fff;
@@ -130,9 +130,10 @@
 .update2 {
   color: rgb(71, 15, 15);
 }
-.postbody:hover {
-  background-color: #5edf94;
-  color: rgb(0, 0, 0);
+
+.postbody {
+  background-color: #b8fff9;
+  cursor: pointer;
 }
 .card {
   display: flex;
@@ -156,4 +157,10 @@
 
 .tags {
   cursor: pointer;
+}
+.background {
+  background-color: #0e185f;
+}
+.login{
+  background-color: #0e185f;
 }

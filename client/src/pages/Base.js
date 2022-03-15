@@ -6,12 +6,14 @@ import Footer from '../components/UI/Footer';
 function Base() {
   return (
     <>
-      <Topcover />
-      <Home />
-      <br />
-      <Footer />
+      <div className='background'>
+        <Topcover />
+        <Home />
+        <br />
+        <Footer />
+      </div>
     </>
-  )
+  );
 }
 
 export default Base
