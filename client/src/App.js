@@ -20,7 +20,7 @@ import Tagspage from "./pages/Tagspage";
 function App() {
   return (
     <Router>
-      <NavbarComponent />
+      <LoggedNavbar />
       <Routes>
         <Route path="/" element={<Base />} />
         <Route path="/login" element={<Login />} />

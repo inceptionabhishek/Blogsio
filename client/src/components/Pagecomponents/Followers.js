@@ -28,29 +28,30 @@ function Followers() {
         </>
       ) : (
         <>
-          {followers.map((item, index) => (
-            <div className="card" key={index}>
-              <div className="card-body">
-                <Avatar src="https://randomuser.me/api/portraits/men/72.jpg" />
-                <h5 className="card-title">
-                  <b>Name : </b>
-                  {item.name}
-                </h5>
-                <p className="card-text">
-                  <b>Email : </b>
-                  {item.email}
-                </p>
-                <p className="card-text">
-                  <b>Phone :</b>
-                  {item.phone}
-                </p>
-                <p className="card-text">
-                  <b>Website: </b>
-                  {item.website}
-                </p>
-              </div>
+          <div className="container">
+            <div className="row">
+              {followers.map((follower) => (
+                <div className="col-md-4" key={follower.id}>
+                  <div className="card card-body">
+                    <div className="row">
+                      <div className="col-md-4">
+                        <img
+                          src="https://media.giphy.com/media/ETY5vYoZjLD6Ibf37u/giphy.gif"
+                          alt={follower.name}
+                          className="Avatar"
+                          width="100px"
+                        />
+                      </div>
+                      <div className="col-md-8">
+                        <h4>{follower.name}</h4>
+                        <p>{follower.email}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </>
       )}
       <Footer />
