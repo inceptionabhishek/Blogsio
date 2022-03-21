@@ -28,7 +28,7 @@ function Totalusers() {
       ) : (
         <>
           {users.map((user, index) => (
-            <Link to="/profile" className="links2">
+            <Link to="/profile" className="links">
               <div className="card" key={index}>
                 <img
                   src="https://www.w3schools.com/w3images/team2.jpg"

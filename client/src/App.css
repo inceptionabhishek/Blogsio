@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap");
+
+
+
 .Heading {
   font-family: "Secular One", sans-serif;
 }
@@ -41,7 +44,7 @@
   color: rgb(255, 255, 255);
 }
 .post-body {
-  font-family: "Source Code Pro", monospace;
+ font-family: "Secular One", sans-serif;
   font-size: 20px;
   background-color: #2fa4ff;
 }
@@ -132,8 +135,10 @@
 }
 
 .postbody {
-  background-color: #b8fff9;
+  background-color: #323e70;
   cursor: pointer;
+  color: #fff;
+  font-family: "Secular One", sans-serif;
 }
 .card {
   display: flex;
@@ -144,7 +149,7 @@
   max-width: 300px;
   margin: 50px auto;
   text-align: center;
-  font-family: arial;
+  font-family: "Secular One", sans-serif;
   padding: 10px;
   cursor: pointer;
 }
@@ -159,9 +164,13 @@
   cursor: pointer;
 }
 .background {
-  background-color: #0e185f;
+  background-color: #21325e;
 }
 .login {
   background-color: #0e185f;
 }
 
+.links {
+  text-decoration: none;
+  color: #171c20;
+}
